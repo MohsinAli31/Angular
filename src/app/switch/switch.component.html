@@ -1,0 +1,11 @@
+<p>switch works!</p>
+<div [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'" style="color: red">This is red switch case</h2>
+  <h2 *ngSwitchCase="'blue'" style="color: rgb(5, 27, 226)">
+    This is blue switch case
+  </h2>
+  <h2 *ngSwitchCase="'gray'" style="color: rgb(44, 43, 43)">
+    This is gray switch case
+  </h2>
+  <h2 *ngSwitchDefault style="color: red">This unknown color</h2>
+</div>

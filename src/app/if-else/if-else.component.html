@@ -1,0 +1,8 @@
+<p>if-else Component</p>
+<h2 *ngIf="show; then truBlock; else elseBlock">Angular if condition true</h2>
+<ng-template #elseBlock>
+  <h2>Else condition runs</h2>
+</ng-template>
+<ng-template #truBlock>
+  <h2>Then condition true</h2>
+</ng-template>

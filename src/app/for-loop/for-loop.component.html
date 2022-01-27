@@ -1,0 +1,22 @@
+<h2 style="color: rgb(16, 63, 206)">Simple for-loop Component starts here</h2>
+<p *ngFor="let list of users">{{ list }}</p>
+////////////////
+<p *ngFor="let list of userDetails">
+  <li>{{ list.name.firstname }}</li>
+  <li>{{ list.name.lastname }}</li>
+  <li>{{ list.email }}</li>
+</p>
+
+<h2 style="color: slateblue">Nested Loop</h2>
+<table *ngFor="let user of userDetails">
+  <tr>
+    <td>{{ user.name.firstname }}</td>
+    <td>{{ user.name.lastname }}</td>
+    <td>{{ user.email }}</td>
+    <td>-</td>
+  </tr>
+  <tr *ngFor="let acc of user.account">
+    <td></td>
+    <td>{{ acc }}</td>
+  </tr>
+</table>

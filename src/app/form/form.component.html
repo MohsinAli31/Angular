@@ -1,0 +1,60 @@
+<!-- import {NgForm} from '@angular/forms'; -->
+<h2 style="color: rgb(16, 63, 206)">Form Component Here</h2>
+
+<form #basicForm="ngForm" (submit)="getData(basicForm.value)">
+  <ul class="form-style-1">
+    <li>
+      <label>Full Name <span class="required">*</span></label
+      ><input
+        ngModel
+        type="text"
+        name="firstName"
+        class="field-divided"
+        placeholder="First"
+      />
+      <input
+        ngModel
+        type="text"
+        name="lastName"
+        class="field-divided"
+        placeholder="Last"
+      />
+    </li>
+    <li>
+      <label>Email <span class="required">*</span></label>
+      <input
+        ngModel
+        type="email"
+        name="email"
+        class="field-long"
+        placeholder="Email"
+      />
+    </li>
+
+    <li>
+      <label>Your Message <span class="required">*</span></label>
+      <textarea
+        ngModel
+        name="message"
+        id="field5"
+        class="field-long field-textarea"
+      ></textarea>
+    </li>
+    <li>
+      <input type="submit" value="Submit" />
+    </li>
+  </ul>
+</form>
+
+<h2 *ngIf="show === 'yes'; then truBlock">Angular if condition true</h2>
+<!-- <ng-template #elseBlock>
+  <h2>Else condition runs</h2>
+</ng-template> -->
+<ng-template #truBlock>
+  <ul>
+    <li>{{ userDate.firstName }}</li>
+    <li>{{ userDate.lastName }}</li>
+    <li>{{ userDate.email }}</li>
+    <li>{{ userDate.message }}</li>
+  </ul>
+</ng-template>
