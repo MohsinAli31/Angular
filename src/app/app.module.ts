@@ -13,6 +13,11 @@ import { SwitchComponent } from './switch/switch.component';
 import { ForLoopComponent } from './for-loop/for-loop.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialDesignComponent } from './material-design/material-design.component';
+import { MatButtonModule } from '@angular/material/button';
+import { SimpleCrudComponent } from './simple-crud/simple-crud.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +31,17 @@ import { FormsModule } from '@angular/forms';
     SwitchComponent,
     ForLoopComponent,
     FormComponent,
+    MaterialDesignComponent,
+    SimpleCrudComponent,
+    PipesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

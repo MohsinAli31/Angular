@@ -1,0 +1,119 @@
+<p>simple-crud works!</p>
+
+<form
+  #basicForm="ngForm"
+  (submit)="recordUpdated(basicForm.value)"
+  *ngIf="disable"
+>
+  <input
+    class="field-divided"
+    ngModel
+    type="text"
+    name="firstName"
+    placeholder="{{ updateData.firstName }}"
+  />
+  <input
+    class="field-divided"
+    ngModel
+    type="text"
+    name="lastName"
+    placeholder="{{ updateData.lastName }}"
+  />
+  <input
+    class="field-divided"
+    type="email"
+    ngModel
+    name="email"
+    placeholder="{{ updateData.email }}"
+  />
+
+  <input
+    class="field-divided"
+    type="text"
+    ngModel
+    name="message"
+    placeholder="{{ updateData.message }}"
+  />
+  <button type="submit">Add Record</button>
+</form>
+<form #basicForm="ngForm" (submit)="getData(basicForm.value)">
+  <ul class="form-style-1">
+    <li>
+      <label>Full Name <span class="required">*</span></label
+      ><input
+        ngModel
+        type="text"
+        name="firstName"
+        class="field-divided"
+        placeholder="First"
+      />
+      <input
+        ngModel
+        type="text"
+        name="lastName"
+        class="field-divided"
+        placeholder="Last"
+      />
+    </li>
+    <li>
+      <label>Email <span class="required">*</span></label>
+      <input
+        ngModel
+        type="email"
+        name="email"
+        class="field-long"
+        placeholder="Email"
+      />
+    </li>
+
+    <li>
+      <label>Your Message <span class="required">*</span></label>
+      <textarea
+        ngModel
+        name="message"
+        id="field5"
+        class="field-long field-textarea"
+      ></textarea>
+    </li>
+    <li>
+      <input type="submit" value="Submit" />
+    </li>
+  </ul>
+</form>
+<table>
+  <tr>
+    <th>First Name</th>
+    <br /><br />
+    <th>Last Name</th>
+    <br /><br />
+    <th>email</th>
+    <br /><br />
+    <th>message</th>
+  </tr>
+  <tr *ngFor="let item of list">
+    <td>{{ item.firstName }}</td>
+    <br /><br />
+    <td>{{ item.lastName }}</td>
+    <br /><br />
+    <td>{{ item.email }}</td>
+    <br /><br />
+    <td>{{ item.message }}</td>
+    <td><button (click)="delete(item)">Delete</button></td>
+    <td><button (click)="update(item)">Update</button></td>
+  </tr>
+</table>
+
+<!-- <h2 *ngIf="show === 'yes'; then truBlock">Angular if condition true</h2>
+ <ng-template #elseBlock>
+  <h2>Else condition runs</h2>
+</ng-template> -->
+<!-- <ng-template #truBlock>
+  <ul>
+    <li>{{ userDate.firstName }}</li>
+    <li>{{ userDate.lastName }}</li>
+    <li>{{ userDate.email }}</li>
+    <li>{{ userDate.message }}</li>
+  </ul>
+</ng-template>
+-->
+-->
